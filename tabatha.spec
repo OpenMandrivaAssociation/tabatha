@@ -30,18 +30,16 @@ mkdir -p $RPM_BUILD_ROOT/{%_bindir,%_sbindir,%_datadir}
 %makeinstall_std
 
 #menu
-(cd $RPM_BUILD_ROOT
-mkdir -p ./%{_menudir}
-cat > ./%{_menudir}/%{name} <<EOF
-?package(%{name}):\
-command="%{_bindir}/tabatha"\
-title="Tabatha"\
-longtitle="Quick-configure menu"\
-needs="x11"\
-icon="configuration_section.png"\
-section="System/Configuration/Other"
+mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications/
+cat << EOF > %buildroot%{_datadir}/applications/mandriva-%{name}.desktop
+[Desktop Entry]
+Type=Application
+Exec=%{_bindir}/tabatha
+Name=Tabatha
+Comment=Quick-configure menu
+Icon=configuration_section
+Categories=Settings;
 EOF
-)
 
 %post
 %update_menus
@@ -58,5 +56,5 @@ rm -rf $RPM_BUILD_ROOT
 %_bindir/%name
 %_sbindir/%name
 %_datadir/%name
-%_menudir/%name
+%{_datadir}/applications/mandriva-%name.desktop
 
