@@ -11,6 +11,7 @@ License: 	GPL
 Group: 		System/Configuration/Other
 Source: 	%{name}-%{version}.tar.bz2
 
+Buildroot: 	%_tmppath/%name-%version-buildroot
 BuildArch:	noarch
 Requires:	usermode-consoleonly
 
