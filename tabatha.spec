@@ -1,6 +1,6 @@
 %define name 	tabatha
 %define version 0.6
-%define release %mkrel 1
+%define release %mkrel 3
 
 Summary: 	Push-button menu for system commands
 Name: 		%name
