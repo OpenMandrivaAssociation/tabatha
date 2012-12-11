@@ -63,3 +63,34 @@ rm -rf $RPM_BUILD_ROOT
 %_datadir/%name
 %{_datadir}/applications/mandriva-%name.desktop
 
+
+
+%changelog
+* Tue Sep 08 2009 Thierry Vignaud <tvignaud@mandriva.com> 0.6-5mdv2010.0
++ Revision: 434265
+- rebuild
+
+* Sat Aug 02 2008 Thierry Vignaud <tvignaud@mandriva.com> 0.6-4mdv2009.0
++ Revision: 261342
+- rebuild
+
+* Tue Jul 29 2008 Thierry Vignaud <tvignaud@mandriva.com> 0.6-3mdv2009.0
++ Revision: 254070
+- rebuild
+
+  + Pixel <pixel@mandriva.com>
+    - rpm filetriggers deprecates update_menus/update_scrollkeeper/update_mime_database/update_icon_cache/update_desktop_database/post_install_gconf_schemas
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+* Thu Dec 20 2007 Thierry Vignaud <tvignaud@mandriva.com> 0.6-1mdv2008.1
++ Revision: 135455
+- auto-convert XDG menu entry
+- kill re-definition of %%buildroot on Pixel's request
+- use %%mkrel
+- import tabatha
+
+
+* Mon Aug 16 2004 Austin Acton <austin@mandrake.org> 0.6-1mdk
+- initial package
