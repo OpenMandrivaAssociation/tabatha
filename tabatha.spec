@@ -6,7 +6,7 @@ Summary: 	Push-button menu for system commands
 Name: 		%name
 Version: 	%version
 Release: 	%release
-Url: 		http://groundstate.ca/tabatha/
+Url: 		https://groundstate.ca/tabatha/
 License: 	GPL
 Group: 		System/Configuration/Other
 Source: 	%{name}-%{version}.tar.bz2
